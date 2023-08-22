@@ -134,7 +134,7 @@ async function getData(): Promise<Asns[]> {
 	];
 }
 
-export default async function DemoPage() {
+export default async function HomePage() {
 	const supabase = createServerComponentClient({ cookies });
 	const {
 		data: { session },
