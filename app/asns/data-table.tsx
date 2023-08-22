@@ -76,11 +76,6 @@ export function DataTable<TData, TValue>({
 
 	return (
 		<div>
-			<div className="flex-1 text-sm text-muted-foreground">
-				{table.getFilteredSelectedRowModel().rows.length} of{" "}
-				{table.getFilteredRowModel().rows.length} row(s) selected.
-			</div>
-
 			<div className="flex items-center py-4">
 				<Input
 					placeholder="Filter ASN No."
@@ -168,6 +163,10 @@ export function DataTable<TData, TValue>({
 				</Table>
 			</div>
 			<div className="flex items-center justify-end space-x-2 py-4">
+				<div className="flex-1 text-sm text-muted-foreground">
+					{table.getFilteredSelectedRowModel().rows.length} of{" "}
+					{table.getFilteredRowModel().rows.length} row(s) selected.
+				</div>
 				<Button
 					variant="outline"
 					size="sm"
